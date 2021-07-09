@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Management System</title>
+
+    <!-- Favicons -->
+    <link href="images/icons/medical.png" rel="icon">
+    <link href="images/icons/medical.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--logo start-->
+            <a href="/index" class="logo"><img style="width: 140px;height: 40px;" src="images/logo.png" alt="alternative"></a>
+            <!--logo end-->
+
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li class="sub-menu">
+                        <a href="/managementSystem">
+                            <i class="fa fa-medkit"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="active" href="/viewEng">
+                            <i class="fa fa-user-md"></i>
+                            <span>Engineers</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="/showEq">
+                            <i class="fa fa-cogs"></i>
+                            <span>Equipments</span>
+                        </a>
+                    </li>
+
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa  fa-hospital-o"></i>
+                            <span>Departments</span>
+                        </a>
+                        <ul style="padding-left: 0;">
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>OR</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationOR">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionOR">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceOR">Preventive Maintainance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>CCU</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationCCU">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionCCU">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceCCU">Preventive Maintainance</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>Out Patient</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationOutPatient">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionOutPatient">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceOutPatient">Preventive Maintainance</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Add Reports</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/pre-installationform">Add Pre-installation Report</a></li>
+                            <li><a href="/showDailyInspectionForm">Add Daily Inspection Report</a></li>
+                            <li><a href="/showPreventiveMaintainanceForm">Add Preventive Maintainance</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i> Add A New Engineer</h3>
+
+                <!-- /row -->
+                <div class="row mt">
+                    <div class="col-lg-12">
+                        <div class="form-panel">
+                            <div class="form">
+                                <form class="cmxform form-horizontal style-form" id="signupForm" method="Post" action="/addEng">
+                                    <div class="form-group">
+                                        <label for="firstname" class="control-label col-lg-2">First Name</label>
+                                        <div class="col-lg-10">
+                                            <input class=" form-control" id="firstname" name="firstname" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname" class="control-label col-lg-2">Last Name</label>
+                                        <div class="col-lg-10">
+                                            <input class=" form-control" id="lastname" name="lastname" type="text" required/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="department" class="control-label col-lg-2">Department's Name</label>
+                                        <div class="col-lg-10">
+                                            <select class="form-control" id="department" name="department" required>
+                                                <option value="OR">OR</option>
+                                                <option value="CCU">CCU</option>
+                                                <option value="OutPatient">Out Patient</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="salary" class="control-label col-lg-2">Salary</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control" id="salary" name="salary" type="number" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="control-label col-lg-2">Email</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control" id="email" name="email" type="email" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="id" class="control-label col-lg-2">ID</label>
+                                        <div class="col-lg-10">
+                                            <input class="form-control" id="id" name="id" type="text" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="col-lg-offset-2 col-lg-10">
+                                            <button class="btn btn-theme" href="/viewEng" type="submit">Add</button>
+                                            <a class="btn btn-theme04" type="button" href="/viewEng">Cancel</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /form-panel -->
+                    </div>
+                    <!-- /col-lg-12 -->
+                </div>
+                <!-- /row -->
+            </section>
+            <!-- /wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="lib/form-validation-script.js"></script>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="lib/jquery.scrollTo.min.js"></script>
+    <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+    <!--common script for all pages-->
+    <script src="lib/common-scripts.js"></script>
+    <!--script for this page-->
+    <script src="lib/form-validation-script.js"></script>
+
+</body>
+
+</html>

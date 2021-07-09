@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <title>Management System</title>
+
+    <!-- Favicons -->
+    <link href="images/icons/medical.png" rel="icon">
+    <link href="images/icons/medical.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--external css-->
+    <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="lib/advanced-datatable/css/demo_page.css" rel="stylesheet" />
+    <link href="lib/advanced-datatable/css/demo_table.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/advanced-datatable/css/DT_bootstrap.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet">
+
+    <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+    <section id="container">
+        <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+        <!--header start-->
+        <header class="header black-bg">
+            <div class="sidebar-toggle-box">
+                <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+            </div>
+            <!--logo start-->
+            <a href="/index" class="logo"><img style="width: 140px;height: 40px;" src="images/logo.png" alt="alternative"></a>
+            <!--logo end-->
+
+        </header>
+        <!--header end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu" id="nav-accordion">
+                    <li class="sub-menu">
+                        <a href="/managementSystem">
+                            <i class="fa fa-medkit"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a class="active" href="/viewEng">
+                            <i class="fa fa-user-md"></i>
+                            <span>Engineers</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="/showEq">
+                            <i class="fa fa-cogs"></i>
+                            <span>Equipments</span>
+                        </a>
+                    </li>
+                    
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa  fa-hospital-o"></i>
+                            <span>Departments</span>
+                        </a>
+                        <ul style="padding-left: 0;">
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>OR</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationOR">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionOR">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceOR">Preventive Maintainance</a></li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>CCU</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationCCU">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionCCU">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceCCU">Preventive Maintainance</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="sub-menu">
+                                <a href="javascript:;">
+                                    <span>Out Patient</span>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="/showPre-installationOutPatient">Pre-installation Reports</a></li>
+                                    <li><a href="/showDailyInspectionOutPatient">Daily Inspection Reports</a></li>
+                                    <li><a href="/showPreventiveMaintainanceOutPatient">Preventive Maintainance</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;">
+                            <i class="fa fa-book"></i>
+                            <span>Add Reports</span>
+                        </a>
+                        <ul class="sub">
+                            <li><a href="/pre-installationform">Add Pre-installation Report</a></li>
+                            <li><a href="/showDailyInspectionForm">Add Daily Inspection Report</a></li>
+                            <li><a href="/showPreventiveMaintainanceForm">Add Preventive Maintainance</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                <h3><i class="fa fa-angle-right"></i> Engineers</h3>
+                <div class="row mb">
+                    <!-- page start-->
+                    <div class="content-panel">
+                        <div class="adv-table">
+                            <a type="button" class="btn btn-theme" href="/addEng" style="float: right!important;margin: 20px 20px!important;"><i class="fa  fa-plus-square" style="margin-right: 5px!important;"></i> Add An Engineer</a>
+
+                            <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="hidden-table-info">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>ID</th>
+                                        <th>Email</th>
+                                        <th>Department</th>
+                                        <th>Salary</th>
+
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                {{#each engineer}}
+                                    <tr >
+                                        <td>{{this.dataValues.FName}}</td>
+
+                                        <td>{{this.dataValues.LName}}</td>
+                                        
+                                        <td>{{this.dataValues.Id}}</td>
+
+                                        <td>{{this.dataValues.Email}}</td>
+
+                                        <td>{{this.dataValues.Department}}</td>
+
+                                        <td>{{this.dataValues.Salary}}</td>
+
+
+                               
+                                   </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- page end-->
+                </div>
+                <!-- /row -->
+            </section>
+            <!-- /wrapper -->
+        </section>
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+    </section>
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" language="javascript" src="lib/advanced-datatable/js/jquery.js"></script>
+
+    <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+
+    <script src="lib/jquery.scrollTo.min.js"></script>
+
+    <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+
+    <script type="text/javascript" language="javascript" src="lib/advanced-datatable/js/jquery.dataTables.js"></script>
+
+    <script type="text/javascript" src="lib/advanced-datatable/js/DT_bootstrap.js"></script>
+
+    <!-- common script for all pages -->
+
+    <script src="lib/common-scripts.js"></script>
+
+    <!--script for this page-->
+    <script type="text/javascript">
+        /* Formating function for row details */
+        function fnFormatDetails(oTable, nTr) {
+            var aData = oTable.fnGetData(nTr);
+            var sOut = '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">';
+            sOut += '<tr><td>Name:</td><td>' + aData[1] +" " + aData[2] + '</td></tr>';
+            sOut += '<tr><td>Email:</td><td>' + aData[4] + '</td></tr>';
+            sOut += '<tr><td>Department:</td><td>' + aData[5] + '</td></tr>';
+            sOut += '<tr><td>Salary:</td><td>' + aData[6] + '</td></tr>';
+            sOut += '<tr><td>ID:</td><td>'+aData[3]+'</td></tr>';
+            sOut += '</table>';
+
+            return sOut;
+        }
+
+        $(document).ready(function() {
+            /*
+             * Insert a 'details' column to the table
+             */
+            var nCloneTh = document.createElement('th');
+            var nCloneTd = document.createElement('td');
+            nCloneTd.innerHTML = '<img src="lib/advanced-datatable/images/details_open.png">';
+            nCloneTd.className ="center";
+            //
+            $('#hidden-table-info thead tr').each(function() {
+                this.insertBefore(nCloneTh, this.childNodes[0]);
+            });
+
+            $('#hidden-table-info tbody tr').each(function() {
+                this.insertBefore(nCloneTd.cloneNode(true), this.childNodes[0]);
+            });
+
+            /*
+             * Initialse DataTables, with no sorting on the 'details' column
+             */
+            var oTable = $('#hidden-table-info').dataTable({
+            "aoColumnDefs": [{
+                "bSortable": false,
+                "aTargets": [0]
+                }],
+            "aaSorting": [
+                    [1, 'asc']
+                ]
+            });
+
+            /* Add event listener for opening and closing details
+             * Note that the indicator for showing which row is open is not controlled by DataTables,
+             * rather it is done here
+             */
+            $('#hidden-table-info tbody td img').live('click', function() {
+                var nTr = $(this).parents('tr')[0];
+                if (oTable.fnIsOpen(nTr)) {
+                    /* This row is already open - close it */
+                    this.src ="lib/advanced-datatable/images/details_open.png";
+                    oTable.fnClose(nTr);
+                } else {
+                    /* Open this row */
+                    this.src ="lib/advanced-datatable/images/details_close.png";
+                    oTable.fnOpen(nTr, fnFormatDetails(oTable, nTr), 'details');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
